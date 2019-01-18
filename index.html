@@ -10,11 +10,13 @@
 
 <body>
 	<div id="app">
-		<h1>{{title}} : {{counter}}</h1>
-		<button v-on:click='addCounter(5, "add to five", $event)'>Add 5</button>
-		<button v-on:click='addCounter(10, "add to ten", $event)'>Add 10</button>
-		<hr>
-
+		<h1>
+			<a href='http://google.com' target="_blank" v-on:click.prevent=''>Google</a>
+		</h1>
+		<h1 v-on:mousemove='handleMouseMove'>
+			X: {{ x }} and Y: {{ y }}
+			<span v-on:mousemove.stop='' style='background-color: aquamarine'>No output X and Y</span>
+		</h1>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
