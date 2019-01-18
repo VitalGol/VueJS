@@ -10,11 +10,11 @@
 
 <body>
 	<div id="app">
-		<h1 v-on:mouseover='onHover'>Counter: {{counter}}</h1>
-		<button v-on:click='addCounter'>Add</button>
+		<h1>{{title}} : {{counter}}</h1>
+		<button v-on:click='addCounter(5, "add to five", $event)'>Add 5</button>
+		<button v-on:click='addCounter(10, "add to ten", $event)'>Add 10</button>
 		<hr>
-		<h1 v-on:mouseover='onHover1'>Counter1: {{counter1}}</h1>
-		<button v-on:click='counter1--'>Subtract</button>
+
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
