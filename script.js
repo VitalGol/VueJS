@@ -1,9 +1,18 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		inputValue: 'hi'
+		isActive: false,
+		color: ''
 	},
 	watch: {},
+	computed: {
+		getCssClasses: function () {
+			return {
+				'red': this.isActive,
+				'blue': !this.isActive
+			};
+		}
+	},
 	methods: {
 
 	}
