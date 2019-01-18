@@ -16,11 +16,6 @@
 			margin: 40px;
 		}
 
-		.bigCircle {
-			width: 120px;
-			height: 120px;
-		}
-
 		.red {
 			background: #F00;
 		}
@@ -37,10 +32,13 @@
 
 <body>
 	<div id="app">
-		<div class="circle" @click='isActive = !isActive' :class='{"red": isActive, "green": !isActive, "bigCircle": isActive}'></div>
-		<div class="circle" :class='color'></div>
+		<!-- <div class="circle" :style='{ "background": color, "height": height + "px"}'></div> -->
+		<div class="circle" :style='circleClasses'></div>
+		<div class="circle" :style='[circleClasses, {"width": height + "px"}]'></div>
+		<!-- прописываем различные цвета -->
 		<input type="text" v-model='color'>
-		<div class="circle" @click='isActive = !isActive' :class='getCssClasses'></div>
+		<!-- изменяем высоту -->
+		<input type="text" v-model='height'>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>

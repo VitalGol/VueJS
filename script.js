@@ -2,14 +2,15 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		isActive: false,
-		color: ''
+		height: 100,
+		color: 'blue'
 	},
 	watch: {},
 	computed: {
-		getCssClasses: function () {
+		circleClasses: function () {
 			return {
-				'red': this.isActive,
-				'blue': !this.isActive
+				"background": this.color,
+				"height": this.height + "px"
 			};
 		}
 	},
