@@ -10,13 +10,24 @@
 
 <body>
 	<div id="app">
-		<h1 v-if='type === "a"'>A</h1>
-		<h1 v-else-if='type === "b"'>B</h1>
-		<h1 v-else-if='type === "c"'>C</h1>
-		<h1 v-else-if='type === "d"'>D</h1>
-		<h1 v-else>not match</h1>
-		<hr>
-		<input type="text" v-model='type'>
+		<template v-if='isVisible'>
+			<h1>I am here</h1>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint in ea optio vero earum
+				perspiciatis
+				expedita? Maiores doloremque nam odit ipsum, placeat debitis minus inventore itaque nihil beatae porro.Porro, rem
+				perferendis dolor, aspernatur vitae ipsum libero exercitationem, accusantium quis numquam ipsam soluta.
+				Exercitationem at accusamus doloribus sit expedita obcaecati vitae eius, ab praesentium sunt aliquid cupiditate
+				dolor! Voluptatem!</p>
+		</template>
+		<template v-else>
+			<h1 style="color:rgb(29, 155, 60)">I am there</h1>
+			<p style="color: rgb(0, 81, 255)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint in ea optio
+				vero earum perspiciatis
+				expedita? Maiores doloremque nam odit ipsum, placeat debitis minus inventore itaque nihil beatae porro.Porro, rem
+				perferendis dolor, aspernatur vitae ipsum libero exercitationem, accusantium quis numquam ipsam soluta.
+				Exercitationem at accusamus doloribus sit expedita obcaecati vitae eius, ab praesentium sunt aliquid cupiditate
+				dolor! Voluptatem!</p>
+		</template>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
