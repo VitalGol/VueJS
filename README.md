@@ -1,1 +1,1 @@
-# VueJS
+# VueJS - first steps
