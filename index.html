@@ -10,13 +10,17 @@
 
 <body>
 	<div id="app">
-
-<ul>
-	<li v-for='(person, index) in people'>{{index + 1}} - {{person}}</li>
-
-</ul>
+		<ul>
+			<li v-for='(person, index) of people'>{{index + 1}}. {{person.name}} - <i>{{person.age}}</i></li>
+		</ul>
 		<hr>
-		<button @click='isVisible = !isVisible'>Toggle</button>
+		<ol>
+			<li v-for='num of 3'>{{num}}</li>
+		</ol>
+		<hr>
+		<ul>
+			<li v-for='(value, key, index) in person'><em>{{index + 1}}</em> : <b>{{key}}</b> - {{value}}</li>
+		</ul>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
