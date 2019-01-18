@@ -10,24 +10,13 @@
 
 <body>
 	<div id="app">
-		<template v-if='isVisible'>
-			<h1>I am here</h1>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint in ea optio vero earum
-				perspiciatis
-				expedita? Maiores doloremque nam odit ipsum, placeat debitis minus inventore itaque nihil beatae porro.Porro, rem
-				perferendis dolor, aspernatur vitae ipsum libero exercitationem, accusantium quis numquam ipsam soluta.
-				Exercitationem at accusamus doloribus sit expedita obcaecati vitae eius, ab praesentium sunt aliquid cupiditate
-				dolor! Voluptatem!</p>
-		</template>
-		<template v-else>
-			<h1 style="color:rgb(29, 155, 60)">I am there</h1>
-			<p style="color: rgb(0, 81, 255)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sint in ea optio
-				vero earum perspiciatis
-				expedita? Maiores doloremque nam odit ipsum, placeat debitis minus inventore itaque nihil beatae porro.Porro, rem
-				perferendis dolor, aspernatur vitae ipsum libero exercitationem, accusantium quis numquam ipsam soluta.
-				Exercitationem at accusamus doloribus sit expedita obcaecati vitae eius, ab praesentium sunt aliquid cupiditate
-				dolor! Voluptatem!</p>
-		</template>
+
+		<!-- <h1 v-if='isVisible'>I am here</h1>
+		<h1 v-else>I am there</h1> -->
+		<h1 v-show='isVisible'>I am here</h1>
+		<h1 v-show='!isVisible'>I am there</h1>
+		<hr>
+		<button @click='isVisible = !isVisible'>Toggle</button>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
