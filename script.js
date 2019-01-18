@@ -9,6 +9,12 @@ var app = new Vue({
 		handleMouseMove: function (event) {
 			this.x = event.clientX;
 			this.y = event.clientY;
+		},
+		alertValue: function (event) {
+			alert(event.target.value);
+			// if (event.keyCode === 13) {
+      //  alert(event.target.value);
+			// }
 		}
 	}
 });

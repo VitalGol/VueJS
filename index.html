@@ -17,6 +17,7 @@
 			X: {{ x }} and Y: {{ y }}
 			<span v-on:mousemove.stop='' style='background-color: aquamarine'>No output X and Y</span>
 		</h1>
+		<input type="text" v-on:keyup.enter.space='alertValue'>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
