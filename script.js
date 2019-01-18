@@ -4,7 +4,8 @@ var app = new Vue({
 		message: 'Привет, Vue!',
 		name: 'Vitaly',
 		isOK: true,
-		string: 'ylatiV si eman yM'
+		string: 'ylatiV si eman yM',
+		url: 'http://google.com'
 	},
 	watch: {
 
