@@ -10,13 +10,7 @@
 
 <body>
 	<div id="app">
-		<h1>{{message}}</h1>
-		<h1>Hello {{ name }}</h1>
-		<h1>Method: {{ sayHi() }}</h1>
-		<h1>statement: {{ isOK ? 'I am OK' : 'I am not OK'}}</h1>
-    <h1>Function: {{ string.split('').reverse().join('')}}</h1>
-<h2><a v-bind:href="url">{{url}}</a></h2>
-
+		<h2 v-html='link'></h2>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
