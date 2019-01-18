@@ -1,7 +1,12 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		isVisible: true
+		people: [
+			'Helen',
+			'Bob',
+			'Max',
+			'Glasha'
+		]
 
 	},
 	watch: {},

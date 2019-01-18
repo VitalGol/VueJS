@@ -11,10 +11,10 @@
 <body>
 	<div id="app">
 
-		<!-- <h1 v-if='isVisible'>I am here</h1>
-		<h1 v-else>I am there</h1> -->
-		<h1 v-show='isVisible'>I am here</h1>
-		<h1 v-show='!isVisible'>I am there</h1>
+<ul>
+	<li v-for='(person, index) in people'>{{index + 1}} - {{person}}</li>
+
+</ul>
 		<hr>
 		<button @click='isVisible = !isVisible'>Toggle</button>
 	</div>
