@@ -1,7 +1,7 @@
 var app = new Vue({
 	el: '#app',
 	data: {
-		isVisible: true
+		type: 'a'
 
 	},
 	watch: {},
