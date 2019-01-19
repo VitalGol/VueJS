@@ -10,17 +10,13 @@
 
 <body>
 	<div id="app">
-		<ul>
-			<li v-for='(person, index) of people'>{{index + 1}}. {{person.name}} - <i>{{person.age}}</i></li>
-		</ul>
+		<h2>Counter: {{counter}} / {{ counter1 }}</h2>
+		<h3>result- {{ result() }}</h3>
+		<h3>computedResult- {{ computedResult }}</h3>
 		<hr>
-		<ol>
-			<li v-for='num of 3'>{{num}}</li>
-		</ol>
-		<hr>
-		<ul>
-			<li v-for='(value, key, index) in person'><em>{{index + 1}}</em> : <b>{{key}}</b> - {{value}}</li>
-		</ul>
+		<button @click='addCounter'>Add</button>
+		<button @click='subCounter'>Subtract</button>
+		<button @click='counter1++'>Add counter1</button>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
