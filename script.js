@@ -4,27 +4,15 @@ var app = new Vue({
 		title: 'Hello'
 	},
 	methods: {
-		alertFast: () => {
-     alert('I am from APP');
-		}
-	}
-});
-
-app.newField = 'someText';
-// console.log(app);
-
-var app1 = new Vue({
-	el: '#app1',
-	data: {
-		title: 'Hello Vitaly'
-	},
-	methods: {
-		updateTitle: () => {
-      app.title = 'updated from second app';
-			app.newField = 'New field';
-			setTimeout(() => {
-				app.alertFast();
-			}, 3000);
+		updateTitle() {
+			this.title = 'it is NEW title';
+			this.$refs.reference.style.color = '#0f0';
+			//  console.log(this.$refs);
+			//  console.log(this.$refs.reference);
+			//  console.log(this.$refs.horizLine);
+			console.log(document.querySelector('hr'));
+			this.$refs.horizLine.style.height = '5px';
+			this.$refs.horizLine.style.backgroundColor = '#00f';
 		}
 	}
 });

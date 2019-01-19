@@ -10,14 +10,9 @@
 
 <body>
 	<div id="app">
-		<h2>{{ title }}</h2>
-		<h2>{{ newField }}</h2>
-		<button @click='title = "Updated title"'>Updated title</button>
-	</div>
-	<hr>
-	<div id="app1">
-		<h2>{{ title }}</h2>
+		<h2 ref="reference">{{ title }}</h2>
 		<button @click='updateTitle'>Updated title</button>
+		<hr ref="horizLine">
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="script.js"></script>
