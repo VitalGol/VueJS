@@ -11,6 +11,11 @@ var app = new Vue({
 			return this.counter > 5 ? 'More than 5' : 'Less than 5';
 		}
 	},
+	watch: {
+		counter: function(value) {
+			console.log('this.counter = ' + value);
+		}
+	},
 	methods: {
 		addCounter: function() {
 			this.counter++;
