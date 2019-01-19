@@ -1,35 +1,22 @@
-var app = new Vue({
-	el: '#app',
-	data: {
-		title: 'Hello!'
-		},
-		beforeCreate() {
-			console.log('before Create');
-		},
-		created() {
-			console.log('Create');
-		},
-		beforeMount() {
-				console.log('before Mount');
-		},
-		mounted() {
-			console.log('mounted');
-		},
-		beforeUpdate() {
-			console.log('before Update');
-		},
-		updated() {
-			console.log('Update');
-		},
-		beforeDestroy() {
-			console.log('before Destroy');
-		},
-		destroyed() {
-			console.log('Destroy');
-		},
-		methods: {
-			doDestroy() {
-				this.$destroy();
-			}
-		},
+Vue.component('my-counter', {
+	template: `
+		<div style='border: 1px solid #000; padding: 10px'>
+			<h2> counter : {{ counter }}</h2>
+		  <button @click='add'>Change</button>
+		</div>
+		`,
+	data: function () {
+		return {
+			counter: 0
+		}
+	},
+	methods: {
+		add: function () {
+			this.counter++;
+		}
+	}
+});
+
+new Vue({
+	el: '#app'
 });
