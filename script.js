@@ -24,5 +24,8 @@ new Vue({
 	}
 });
 new Vue({
-	el: '#app1'
+	el: '#app1',
+	components: {
+		myCounter: component
+	}
 });
