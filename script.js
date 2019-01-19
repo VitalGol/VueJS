@@ -1,4 +1,4 @@
-Vue.component('my-counter', {
+var component = {
 	template: `
 		<div style='border: 1px solid #000; padding: 10px'>
 			<h2> counter : {{ counter }}</h2>
@@ -15,8 +15,14 @@ Vue.component('my-counter', {
 			this.counter++;
 		}
 	}
-});
+};
 
 new Vue({
-	el: '#app'
+	el: '#app',
+	components: {
+		'my-counter': component
+	}
+});
+new Vue({
+	el: '#app1'
 });
